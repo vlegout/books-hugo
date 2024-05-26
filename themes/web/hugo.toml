@@ -3,18 +3,28 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 
 [[menus.main]]
-name = 'Home'
+name = 'Accueil'
 pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
+name = 'Archives'
+pageRef = '/archives'
 weight = 20
 
 [[menus.main]]
-name = 'Tags'
-pageRef = '/tags'
+name = 'Auteurs'
+pageRef = '/authors'
+weight = 30
+
+[[menus.main]]
+name = 'Poésie'
+pageRef = '/poetry'
+weight = 30
+
+[[menus.main]]
+name = 'Statistiques'
+pageRef = '/stats'
 weight = 30
 
 [module]
