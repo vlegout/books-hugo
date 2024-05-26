@@ -28,7 +28,12 @@
   </div>
 
   <div class="callout text-center">
-    <h1>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s" .Title }}{{ end }}</h1>
+    {{ if eq .Type "poems" }}
+      <h1>{{ printf "%s" .Title }}</h1>
+      <h2>{{ printf "%s" .Params.subTitle }}</h2>
+    {{ else }}
+      <h1>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s" .Title }}{{ end }}</h1>
+    {{ end }}
   </div>
 
   <div class="grid-container">
