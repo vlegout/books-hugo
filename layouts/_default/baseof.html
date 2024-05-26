@@ -1,17 +1,52 @@
-<!DOCTYPE html>
-<html lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
 <head>
-  {{ partial "head.html" . }}
+  <title>Lectures</title>
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta name="title" content="Vincent Legout"/>
+  <meta name="author" content="Vincent Legout"/>
+
+  <link rel="stylesheet" href="/css/foundation.min.css">
 </head>
 <body>
-  <header>
-    {{ partial "header.html" . }}
-  </header>
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
+
+  <div class="top-bar" id="responsive-menu">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li><a href="https://vincent.legout.info" style="color: #000;">VL</a></li>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/archives">Archives</a></li>
+        <li><a href="/authors">Auteurs</a></li>
+        <li><a href="/poetry">Poésie</a></li>
+        <li><a href="/stats">Statistiques</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout text-center">
+    <h1>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s" .Title }}{{ end }}</h1>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell medium-8">
+        <main>
+         {{ block "main" . }}{{ end }}
+        </main>
+      </div>
+    </div>
+  </div>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/what-input.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+
 </body>
 </html>
