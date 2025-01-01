@@ -1,5 +1,5 @@
 +++
 title = 'Lectures'
 type = "archives"
-layout = "2024"
+layout = "2025"
 +++
